@@ -1,0 +1,11 @@
+function [outputArg1,outputArg2] = Triangles(pionG,pionD,pozL,pozP, n)
+% komentarze
+
+x = linspace(pozL,pozP, n);
+y = linspace(pionG,pionD, n);
+
+[X,Y] = meshgrid(x,y);
+cords = complex(X,Y);
+p0
+end
+
