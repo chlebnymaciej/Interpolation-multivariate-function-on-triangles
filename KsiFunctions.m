@@ -1,5 +1,6 @@
 function [ksi0, ksi1, ksi2, ksi3, ksi4, ksi5] = ...
-         KsiFunctions(y2, y1, y0, x2, x1, x0, x, y)
+         KsiFunctions(p2, p1, p0, interpolationPoint)
+%(y2, y1, y0, x2, x1, x0, x, y)
 % Autor: Maciej Chlebny
 % Function that returns ksi-functions for (x,y)
 % Equations from lecture
@@ -11,9 +12,10 @@ y = interpolationPoint(:,2);
 x2 = p2(:,1);
 x1 = p1(:,1);
 x0 = p0(:,1);
-x = interpolationPoint(:,1)
+x = interpolationPoint(:,1);
 
-[fi0, fi1, fi2] = FiFunctions(y2,y1,y0,x2,x1,x0,x,y);
+[fi0, fi1, fi2] = FiFunctions(p2, p1, p0, interpolationPoint);
+% (y2,y1,y0,x2,x1,x0,x,y);
 
 ksi0 = fi0.*(fi0.*2-1);
 ksi1 = fi1.*(fi1.*2-1);
