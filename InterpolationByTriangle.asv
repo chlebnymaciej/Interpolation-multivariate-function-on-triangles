@@ -1,6 +1,0 @@
-function [outputArg1,outputArg2] = ...
-         InterpolationByTriangle(inputArg1,inputArg2)
-% komentarze
-
-end
-

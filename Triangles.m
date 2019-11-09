@@ -1,4 +1,6 @@
-function [p0,p1,p2,p4] = Triangles(pionG,pionD,pozL,pozP, t)
+function [points0, points1, points2] = ...
+         Triangles(pionG, pionD, pozL, pozP, t)
+% komentarze
 % Autor: Maciej Chlebny
 % Function returns 4 vectors of data containings 2t^2 traingles coordinates
 % Better desription  soon
@@ -23,5 +25,8 @@ p1 = [real(p1), imag(p1)];
 p2 = [real(p2), imag(p2)];
 p4 = [real(p4), imag(p4)];
 
+points0 = [p0; p4];
+points1 = [p1; p1];
+points2 = [p2; p2];
 end
 
