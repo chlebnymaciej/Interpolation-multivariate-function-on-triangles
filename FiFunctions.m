@@ -1,6 +1,11 @@
 function [fi0, fi1, fi2] = FiFunctions(p2, p1, p0, interpolationPoint)
-% (y2, y1, y0, x2, x1, x0, x, y)
-% komentarz
+% Autor: Maciej Chlebny
+% Funkcja zwraca fi funkcje do interpolacji biliniowej na trójkącie w interpolationPoint
+% Parametry wejściowe:
+%   p0, p1, p2 - punkty węzłowe
+%   interpolationPoint - punkt interpolacji
+
+% wydzielenie x, y
 y2 = p2(:,2);
 y1 = p1(:,2);
 y0 = p0(:,2);

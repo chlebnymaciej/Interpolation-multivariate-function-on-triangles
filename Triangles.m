@@ -2,12 +2,19 @@ function [points0, points1, points2] = ...
          Triangles(pionG, pionD, pozL, pozP, t)
 % komentarze
 % Autor: Maciej Chlebny
-% Function returns 4 vectors of data containings 2t^2 traingles coordinates
-% Better desription  soon
+% Funkcja zwraca wektory z punktami dla 2n^2 trójkątów
+% Parametry wejściowe:
+%   pionG, pionD - odpowiednio górna i dolna granica przedziału na "y"
+%   pozL, pozP - odpowiednio lewa i prawa granica przedziału na "x"
+%   t - liczba na ile podzielić trójkątów zadany obszar
+% UWAGA !!! t da nam tak naprawdę 2t^2 trójkątów
+
+% równomierne rozłożenie n pukjtów na przedziałach
 n = t+1;
 x = linspace(pozL,pozP, n);
 y = linspace(pionG,pionD, n);
 
+% siatka punktów zespolonych, skraca kod, x = część rzeczywista, y = część urojona 
 [X,Y] = meshgrid(x,y);
 cords = complex(X,Y);
 p0 = cords(2:n, 1:(n-1));

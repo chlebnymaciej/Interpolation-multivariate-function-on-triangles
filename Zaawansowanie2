@@ -1,0 +1,26 @@
+Zadanie projektowe numer 34.
+Interpolacja funkcjami kwadratowymi na kwadracie podzielonym na 2n^2 
+trójkątów
+przystających. Tablicowanie funkcji, przybliżenia i błędu w środkach 
+ciężkości trójkątów.
+Obliczenie błędu maksymalnego w tych punktach.
+
+Wszystkie wzory do wyliczenia wielomianu interpolacyjnego, które używam są wzorami podanymi na wykładzie.
+Wybrałem wersję interpolacji wykonywaną za pomocą funkcji Fi z interpolacji biliniowej
+i funkcji Ksi. W połączeniu dostanę wielomian interpolacyjny w punkcie (x,y) w postaci sumy iloczynów wartości w i-tym węźle oraz wartości i-tej funkcji Ksi w zadanym (x,y).
+
+W projekcie użyję między innymi funkcji:
+- Triangles funkcja która zwraca wektory wierzchołków 2n^2 trojkątów z zadanego kwadratu.
+- TrianglesAdd3Points zwraca wektory z współrzędnymi kolejnych 3 punktów potrzebnych do interpolacji bikwadratowej, jako dane wejściowe przyjmuje wspolrzędne wierzchołków trójkąta.
+- FiFunctions zwraca wektory wartości funkcji fi0, fi1, fi2 dla zadanego trójkąta 
+i punktu dla którego przbliżamy (x,y).
+- KsiFunctions analogicznie do FiFunctions ale zwraca 6 wektorów funkcji ksi.
+- Interpolation funkcja która będzie wykonywać interpolację w zadanym (x,y), będzie przyjmować współrzedne punktów trójkąta, (x,y), oraz handler do funckji, którą interpolujemy, by wyliczyć wartości w węzłach interpolacji.
+- Tablicowanie, funkcja sklejająca wszystkie pozostałe funkcje i zwracającą porządane tablicowanie
+
+W projekcie pojawi się najprawdopodbniej jeszcze kilka funkcji, które miałyby służyć w celu modularyzacji kodu
+oraz takich które wyliczają błąd interpolacji, środki ciężkości trójkątów.
+W załączniku przesyłam prototypy funkcji ( mogą i raczej na pewno jeszcze ulegną zmianie ).
+
+Pozdrawiam,
+Maciej Chlebny 
