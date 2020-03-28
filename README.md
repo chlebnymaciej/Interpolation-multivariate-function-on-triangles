@@ -1,4 +1,6 @@
 # Interpolation-multivariate-function-on-triangles
 
-Program that interpolate multivariate function on arear of rectangle
+Functions that interpolate multivariate function on arear of rectangle
 by using triangle method.
+
+To start the program please run FinalInterpolation function
